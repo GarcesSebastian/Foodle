@@ -22,104 +22,67 @@ let winner = false;
 
 let modeContraReloj = false;
 let winContraReloj = false;
-/*function result(){
-    if(winner){
-        document.querySelector(".spanResult").style.display = "flex";
-        document.querySelector(".txtResult").innerHTML = "Ganaste";
-        document.querySelector(".txtResult").style.color = "lime";  
-        
-        setTimeout(() => {
-            document.querySelector(".spanResult").style.display = "none";
-        }, 1500);
-    }else{
-        document.querySelector(".spanResult").style.display = "flex";
-        document.querySelector(".txtResult").innerHTML = "Ganaste";
-        document.querySelector(".txtResult").style.color = "lime";        
-    
-        setTimeout(() => {
-            document.querySelector(".spanResult").style.display = "none";
-        }, 1500);
-    }
-}*/
 
 function foodIncorrect(){
 
         if(paso1){
             for(let i = 0; i < 5; i++){
                 if(dle.item(i).style.backgroundColor == "yellow"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "yellow";
                 }else if(dle.item(i).style.backgroundColor == "lime"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "lime";
                 }else{
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "gray";
-                    console.log(botonesDle.item(arregloFood[i]+1));
                 }
             }
         }else if(paso2){
             for(let i = 0; i < 5; i++){
                 if(dle.item(i+5).style.backgroundColor == "yellow"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "yellow";
                 }else if(dle.item(i+5).style.backgroundColor == "lime"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "lime";
                 }else{
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "gray";
-                    console.log(botonesDle.item(arregloFood[i]+1));
                 }
             }
         }else if(paso3){
             for(let i = 0; i < 5; i++){
                 if(dle.item(i+10).style.backgroundColor == "yellow"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "yellow";
                 }else if(dle.item(i+10).style.backgroundColor == "lime"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "lime";
                 }else{
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "gray";
-                    console.log(botonesDle.item(arregloFood[i]+1));
                 }
             }
         }else if(paso4){
             for(let i = 0; i < 5; i++){
                 if(dle.item(i+15).style.backgroundColor == "yellow"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "yellow";
                 }else if(dle.item(i+15).style.backgroundColor == "lime"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "lime";
                 }else{
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "gray";
-                    console.log(botonesDle.item(arregloFood[i]+1));
                 }
             }
         }else if(paso5){
             for(let i = 0; i < 5; i++){
                 if(dle.item(i+20).style.backgroundColor == "yellow"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "yellow";
                 }else if(dle.item(i+20).style.backgroundColor == "lime"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "lime";
                 }else{
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "gray";
-                    console.log(botonesDle.item(arregloFood[i]+1));
                 }
             }
         }else if(paso6){
             for(let i = 0; i < 5; i++){
                 if(dle.item(i+25).style.backgroundColor == "yellow"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "yellow";
                 }else if(dle.item(i+25).style.backgroundColor == "lime"){
-                    console.log(botonesDle.item(arregloFood[i]+1));
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "lime";
                 }else{
                     botonesDle.item(arregloFood[i]+1).style.backgroundColor = "gray";
-                    console.log(botonesDle.item(arregloFood[i]+1));
                 }
             }
         }
@@ -167,7 +130,6 @@ function restartWin(){
         
     for(let i = 0; i < 5; i++){
         arregloFoodWin[i] = Math.floor(Math.random()*10);
-        console.log(arregloFoodWin[i]);
     }
 
     paso1 = true;
@@ -302,7 +264,6 @@ let contar9 = 0;
 
 for(let i = 0; i < 5; i++){
     arregloFoodWin[i] = Math.floor(Math.random()*10);
-    console.log(arregloFoodWin[i]);
 }
 
 for(let i = 0; i < 5; i++){
@@ -359,17 +320,6 @@ if(arregloFoodWin[i] == 9){
 }
 }
 
-console.log(arregloFoodWin.find(item => item == 1)+":"+contar1);
-console.log(arregloFoodWin.find(item => item == 2)+":"+contar2);
-console.log(arregloFoodWin.find(item => item == 3)+":"+contar3);
-console.log(arregloFoodWin.find(item => item == 4)+":"+contar4);
-console.log(arregloFoodWin.find(item => item == 5)+":"+contar5);
-console.log(arregloFoodWin.find(item => item == 6)+":"+contar6);
-console.log(arregloFoodWin.find(item => item == 7)+":"+contar7);
-console.log(arregloFoodWin.find(item => item == 8)+":"+contar8);
-console.log(arregloFoodWin.find(item => item == 9)+":"+contar9);
-//console.log(arregloFoodWin.find(item => item == 2)+":"+((arregloFoodWin.findIndex(item => item === 2))+1));
-
 for(let i = 0; i < botonesDle.length; i++){
     botonesDle.item(i).addEventListener("click", () =>{
     if(contClicks >= 0 && contClicks <= 4 & paso1){
@@ -381,7 +331,6 @@ for(let i = 0; i < botonesDle.length; i++){
         arregloFood[contClicks] = i-1;
         arregloBloquearFood[contClicks] = i-1;
         contClicks++;
-        //console.log(arregloFood[contClicks-1]);
 
     }else if(contClicks >= 5 && contClicks <= 9 && paso2){
         src = dleImages[i-1].src;
@@ -523,9 +472,7 @@ botonConfirm.addEventListener("click", () =>{
             if(modeContraReloj && contWin == 5){
                 document.querySelector(".minutos").style.display = "none";
                 document.querySelector(".segundos").style.display = "none";
-                console.log(document.querySelector(".puntos").innerHTML = "Ganaste");
                 winContraReloj = true;
-                console.log(contWin);
             }
 
             if(modoAmigos){
@@ -807,17 +754,6 @@ function darkMode(){
     document.querySelector(".minutos").style.color = "#fff";
     document.querySelector(".puntos").style.color = "#fff";
 
-    /*if(darkModeOn){
-        document.querySelector(".back").addEventListener("mouseover", () =>{
-            document.querySelector(".back").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".back").addEventListener("mouseout", () =>{
-            document.querySelector(".back").style.color = "#fff";
-        });
-    }*/
-  
-
     for(let i = 0; i < dle.length; i++){
         dle.item(i).style.borderColor = "#414458";
     }
@@ -852,17 +788,6 @@ function darkModeOff(){
     document.querySelector(".segundos").style.color = "#0c0c0c";
     document.querySelector(".minutos").style.color = "#0c0c0c";
     document.querySelector(".puntos").style.color = "#0c0c0c";
-
-    /*if(!darkModeOn){
-        document.querySelector(".back").addEventListener("mouseover", () =>{
-            document.querySelector(".back").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".back").addEventListener("mouseout", () =>{
-            document.querySelector(".back").style.color = "#0c0c0c";
-        });
-
-    }*/
 
     for(let i = 0; i < dle.length; i++){
         dle.item(i).style.borderColor = "#dee1e9";
@@ -985,7 +910,6 @@ for(let i = 0; i < botonesDleMode.length; i++){
             //arregloFoodMode.push(i);
             arregloFoodMode[contBotonesMode] = i;
             contBotonesMode++;
-            console.log(arregloFoodMode);
             }
         });
 }
@@ -995,7 +919,6 @@ botonRemoveMode.addEventListener("click", () =>{
         if(contBotonesMode > 0){
             arregloFoodMode.splice(0,arregloFoodMode.length);
             contBotonesMode = 0;
-            console.log(arregloFoodMode);
             for(let i = 0; i < botonesDleMode.length; i++){
                 botonesDleMode.item(i).style.backgroundColor = "rgb(211, 255, 255)";
             }
@@ -1056,9 +979,7 @@ botonConfirmMode.addEventListener("click", () =>{
         }
         document.querySelector(".containerModes").classList.remove("showContainerModes");
     }
-    contMode--;
-    console.log(arregloFoodMode);
-    console.log(arregloFoodWin);
+    contMode-
 
 });
 
@@ -1253,7 +1174,6 @@ function dificultadNormal(){
                 document.querySelector(".segundos").innerHTML = "0"+segundos;    
             }
             }
-            console.log("1");
         }
             
         // Iniciar el contador
