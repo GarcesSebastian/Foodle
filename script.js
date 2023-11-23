@@ -150,7 +150,7 @@ function restartWin(){
         }
     
         for(let i = 0; i < dle.length; i++){
-            dle.item(i).src = "/img/nada2.png";
+            dle.item(i).src = "./img/nada2.png";
         }
 
         for(let i = 0; i < 30; i++){
@@ -376,7 +376,7 @@ for(let i = 0; i < botonesDle.length; i++){
     src = dleImages[i-1].src;
     urlSinDominio = src.replace("http://127.0.0.1:5500", "");    
 
-        dle.item(contClicks).src = urlSinDominio//"/img/food/soap.svg";
+        dle.item(contClicks).src = urlSinDominio//"./img/food/soap.svg";
         
         arregloFood[contClicks] = i-1;
         arregloBloquearFood[contClicks] = i-1;
@@ -387,7 +387,7 @@ for(let i = 0; i < botonesDle.length; i++){
         src = dleImages[i-1].src;
         urlSinDominio = src.replace("http://127.0.0.1:5500", "");    
     
-            dle.item(contClicks).src = urlSinDominio//"/img/food/soap.svg";
+            dle.item(contClicks).src = urlSinDominio//"./img/food/soap.svg";
             
             arregloFood[contClicks - 5] = i-1;
             //console.log(contClicks);
@@ -398,7 +398,7 @@ for(let i = 0; i < botonesDle.length; i++){
         src = dleImages[i-1].src;
         urlSinDominio = src.replace("http://127.0.0.1:5500", "");    
     
-            dle.item(contClicks).src = urlSinDominio//"/img/food/soap.svg";
+            dle.item(contClicks).src = urlSinDominio//"./img/food/soap.svg";
             
             arregloFood[contClicks - 10] = i-1;
             //console.log(contClicks);
@@ -409,7 +409,7 @@ for(let i = 0; i < botonesDle.length; i++){
         src = dleImages[i-1].src;
         urlSinDominio = src.replace("http://127.0.0.1:5500", "");    
     
-            dle.item(contClicks).src = urlSinDominio//"/img/food/soap.svg";
+            dle.item(contClicks).src = urlSinDominio//"./img/food/soap.svg";
             
             arregloFood[contClicks - 15] = i-1;
             //console.log(contClicks);
@@ -420,7 +420,7 @@ for(let i = 0; i < botonesDle.length; i++){
         src = dleImages[i-1].src;
         urlSinDominio = src.replace("http://127.0.0.1:5500", "");    
     
-            dle.item(contClicks).src = urlSinDominio//"/img/food/soap.svg";
+            dle.item(contClicks).src = urlSinDominio//"./img/food/soap.svg";
             
             arregloFood[contClicks - 20] = i-1;
             //console.log(contClicks);
@@ -431,7 +431,7 @@ for(let i = 0; i < botonesDle.length; i++){
         src = dleImages[i-1].src;
         urlSinDominio = src.replace("http://127.0.0.1:5500", "");    
     
-            dle.item(contClicks).src = urlSinDominio//"/img/food/soap.svg";
+            dle.item(contClicks).src = urlSinDominio//"./img/food/soap.svg";
             
             arregloFood[contClicks - 25] = i-1;
             //console.log(contClicks);
@@ -445,7 +445,7 @@ for(let i = 0; i < botonesDle.length; i++){
 
 botonRemove.addEventListener("click", () =>{
     if(contClicks > 0 && contClicks <= 5 && paso1){
-        dle.item(contClicks-1).src = "/img/nada2.png"
+        dle.item(contClicks-1).src = "./img/nada2.png"
         arregloBloquearFood.pop();
         arregloFood.pop();
     for(let i = 0; i < 5; i++){
@@ -454,7 +454,7 @@ botonRemove.addEventListener("click", () =>{
     }
         contClicks--;
     }else if(contClicks > 5 && contClicks <= 10 && paso2 ){
-        dle.item(contClicks-1).src = "/img/nada2.png"
+        dle.item(contClicks-1).src = "./img/nada2.png"
         arregloBloquearFood.pop();
         arregloFood.pop();
     for(let i = 0; i < 5; i++){
@@ -464,7 +464,7 @@ botonRemove.addEventListener("click", () =>{
     contClicks--;
     //console.log(contClicks);
     }else if(contClicks > 10 && contClicks <= 15 && paso3 ){
-        dle.item(contClicks-1).src = "/img/nada2.png"
+        dle.item(contClicks-1).src = "./img/nada2.png"
         arregloBloquearFood.pop();
         arregloFood.pop();
     for(let i = 0; i < 5; i++){
@@ -474,7 +474,7 @@ botonRemove.addEventListener("click", () =>{
     contClicks--;
     //console.log(contClicks);
     }else if(contClicks > 15 && contClicks <= 20 && paso4 ){
-        dle.item(contClicks-1).src = "/img/nada2.png"
+        dle.item(contClicks-1).src = "./img/nada2.png"
         arregloBloquearFood.pop();
         arregloFood.pop();
     for(let i = 0; i < 5; i++){
@@ -484,7 +484,7 @@ botonRemove.addEventListener("click", () =>{
     contClicks--;
     //console.log(contClicks);
     }else if(contClicks > 20 && contClicks <= 25 && paso5 ){
-        dle.item(contClicks-1).src = "/img/nada2.png"
+        dle.item(contClicks-1).src = "./img/nada2.png"
         arregloBloquearFood.pop();
         arregloFood.pop();
     for(let i = 0; i < 5; i++){
@@ -494,7 +494,7 @@ botonRemove.addEventListener("click", () =>{
     contClicks--;
     //console.log(contClicks);
     }else if(contClicks > 25 && contClicks <= 30 && paso6 ){
-        dle.item(contClicks-1).src = "/img/nada2.png"
+        dle.item(contClicks-1).src = "./img/nada2.png"
         arregloBloquearFood.pop();
         arregloFood.pop();
     for(let i = 0; i < 5; i++){
@@ -1030,7 +1030,7 @@ botonConfirmMode.addEventListener("click", () =>{
         }
     
         for(let i = 0; i < dle.length; i++){
-            dle.item(i).src = "/img/nada2.png";
+            dle.item(i).src = "./img/nada2.png";
         }
 
         for(let i = 0; i < 30; i++){
@@ -1362,7 +1362,7 @@ function dificultadImposible(){
                 for(let i = 0; i < 5; i++){
                     dle.item(i).style.backgroundColor = "#0c0c0c";
                     for(let i = 0; i < dle.length;i++){
-                    dle.item(i).src = "/img/nada2.png";
+                    dle.item(i).src = "./img/nada2.png";
                     }
                 }
             }
@@ -1370,7 +1370,7 @@ function dificultadImposible(){
                 for(let i = 0; i < 10; i++){
                     dle.item(i).style.backgroundColor = "#0c0c0c";
                     for(let i = 0; i < dle.length;i++){
-                    dle.item(i).src = "/img/nada2.png";
+                    dle.item(i).src = "./img/nada2.png";
                     }
                 }
             }
@@ -1378,7 +1378,7 @@ function dificultadImposible(){
                 for(let i = 0; i < 15; i++){
                     dle.item(i).style.backgroundColor = "#0c0c0c";
                     for(let i = 0; i < dle.length;i++){
-                    dle.item(i).src = "/img/nada2.png";
+                    dle.item(i).src = "./img/nada2.png";
                     }
                 }
             }
@@ -1386,7 +1386,7 @@ function dificultadImposible(){
                 for(let i = 0; i < 20; i++){
                     dle.item(i).style.backgroundColor = "#0c0c0c";
                     for(let i = 0; i < dle.length;i++){
-                    dle.item(i).src = "/img/nada2.png";
+                    dle.item(i).src = "./img/nada2.png";
                     }
                 }
             }
@@ -1394,7 +1394,7 @@ function dificultadImposible(){
                 for(let i = 0; i < 25; i++){
                     dle.item(i).style.backgroundColor = "#0c0c0c";
                     for(let i = 0; i < dle.length;i++){
-                    dle.item(i).src = "/img/nada2.png";
+                    dle.item(i).src = "./img/nada2.png";
                     }
                 }
             }
@@ -1402,7 +1402,7 @@ function dificultadImposible(){
                 for(let i = 0; i < 30; i++){
                     dle.item(i).style.backgroundColor = "#0c0c0c";
                     for(let i = 0; i < dle.length;i++){
-                    dle.item(i).src = "/img/nada2.png";
+                    dle.item(i).src = "./img/nada2.png";
                     }
                 }
             }
@@ -1464,7 +1464,7 @@ function restartMode(){
     }
 
     for(let i = 0; i < dle.length; i++){
-        dle.item(i).src = "/img/nada2.png";
+        dle.item(i).src = "./img/nada2.png";
     }
 
     for(let i = 0; i < 30; i++){
