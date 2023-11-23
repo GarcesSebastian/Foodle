@@ -1,0 +1,55 @@
+@media (max-width: 1000px) {
+    .container{
+        position: relative;
+        width: 50%;
+        height:fit-content;
+    }
+}
+
+@media (max-width: 860px) {
+    .container{
+        position: relative;
+        width: 60%;
+        height:fit-content;
+    }
+}
+
+@media (max-width: 680px) {
+    .container{
+        position: relative;
+        width: 70%;
+        height:fit-content;
+    }
+}
+
+@media (max-width: 580px) {
+    .container{
+        position: relative;
+        width: 80%;
+        height:fit-content;
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        position: relative;
+        width: 90%;
+        height:fit-content;
+    }
+}
+
+@media (max-width: 380px) {
+    .container{
+        position: relative;
+        width: 100%;
+        height:fit-content;
+    }
+}
+
+@media (max-width: 280px) {
+    .container{
+        position: relative;
+        width: 110%;
+        height:fit-content;
+    }
+}

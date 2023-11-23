@@ -1,3 +1,26 @@
+
+window.addEventListener("DOMContentLoaded", () => {
+    const stateMode = JSON.parse(localStorage.getItem("stateMode"));
+
+    if (stateMode !== null && stateMode !== undefined) {
+
+        if(stateMode){
+            document.getElementById("toggle").checked = true;
+            darkMode();
+        }else{
+            document.getElementById("toggle").checked = false;
+            darkModeOff();
+        }
+
+    } else {
+        darkMode();
+        document.getElementById("toggle").checked = true;
+        localStorage.setItem("stateMode", JSON.stringify(true));
+    }
+});
+
+
+
 let botonesDle = document.querySelectorAll(".btnDle");
 let dleImages = document.querySelectorAll("img.btnDle");
 let botonRemove = document.querySelector(".btnRemove");
@@ -455,8 +478,6 @@ botonRemove.addEventListener("click", () =>{
     }
 });
 
-
-
 botonConfirm.addEventListener("click", () =>{
     if(contClicks == 5){
         for(let i = 0; i < 5; i++){
@@ -721,7 +742,6 @@ document.querySelector(".backSettings").addEventListener("click", () =>{
     }
 });
 
-
 /*Mode Dark */
 
 let darkModeOn = false;
@@ -758,6 +778,39 @@ function darkMode(){
         dle.item(i).style.borderColor = "#414458";
     }
 
+    document.querySelector(".back").addEventListener("mouseover", () =>{
+        document.querySelector(".back").style.color = "rgb(124, 255, 124)";
+    });
+
+    document.querySelector(".back").addEventListener("mouseout", () =>{
+        document.querySelector(".back").style.color = "#fff";
+    });
+
+    document.querySelector(".backmode").addEventListener("mouseover", () =>{
+        document.querySelector(".backmode").style.color = "rgb(124, 255, 124)";
+    });
+
+    document.querySelector(".backmode").addEventListener("mouseout", () =>{
+        document.querySelector(".backmode").style.color = "#fff";
+    });
+
+    document.querySelector(".settings").addEventListener("mouseover", () =>{
+        document.querySelector(".settings").style.color = "rgb(124, 255, 124)";
+    });
+
+    document.querySelector(".settings").addEventListener("mouseout", () =>{
+        document.querySelector(".settings").style.color = "#fff";
+    });
+
+    document.querySelector(".mode").addEventListener("mouseover", () =>{
+        document.querySelector(".mode").style.color = "rgb(124, 255, 124)";
+    });
+
+    document.querySelector(".mode").addEventListener("mouseout", () =>{
+        document.querySelector(".mode").style.color = "#fff";
+    });
+
+
 
 }
 
@@ -792,77 +845,50 @@ function darkModeOff(){
     for(let i = 0; i < dle.length; i++){
         dle.item(i).style.borderColor = "#dee1e9";
     }
-}
 
+    document.querySelector(".back").addEventListener("mouseover", () =>{
+        document.querySelector(".back").style.color = "rgb(124, 255, 124)";
+    });
+
+    document.querySelector(".back").addEventListener("mouseout", () =>{
+        document.querySelector(".back").style.color = "#0c0c0c";
+    });
+
+    document.querySelector(".backmode").addEventListener("mouseover", () =>{
+        document.querySelector(".backmode").style.color = "rgb(124, 255, 124)";
+    });
+
+    document.querySelector(".backmode").addEventListener("mouseout", () =>{
+        document.querySelector(".backmode").style.color = "#0c0c0c";
+    });
+
+    document.querySelector(".settings").addEventListener("mouseover", () =>{
+        document.querySelector(".settings").style.color = "rgb(124, 255, 124)";
+    });
+
+    document.querySelector(".settings").addEventListener("mouseout", () =>{
+        document.querySelector(".settings").style.color = "#0c0c0c";
+    });
+
+    document.querySelector(".mode").addEventListener("mouseover", () =>{
+        document.querySelector(".mode").style.color = "rgb(124, 255, 124)";
+    });
+
+    document.querySelector(".mode").addEventListener("mouseout", () =>{
+        document.querySelector(".mode").style.color = "#0c0c0c";
+    });
+
+}
 
 document.getElementById("toggle").addEventListener("change", () =>{
     if(document.getElementById("toggle").checked){
         darkMode();
-        document.querySelector(".back").addEventListener("mouseover", () =>{
-            document.querySelector(".back").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".back").addEventListener("mouseout", () =>{
-            document.querySelector(".back").style.color = "#fff";
-        });
-
-        document.querySelector(".backmode").addEventListener("mouseover", () =>{
-            document.querySelector(".backmode").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".backmode").addEventListener("mouseout", () =>{
-            document.querySelector(".backmode").style.color = "#fff";
-        });
-
-        document.querySelector(".settings").addEventListener("mouseover", () =>{
-            document.querySelector(".settings").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".settings").addEventListener("mouseout", () =>{
-            document.querySelector(".settings").style.color = "#fff";
-        });
-
-        document.querySelector(".mode").addEventListener("mouseover", () =>{
-            document.querySelector(".mode").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".mode").addEventListener("mouseout", () =>{
-            document.querySelector(".mode").style.color = "#fff";
-        });
+        document.getElementById("toggle").checked = true;
+        localStorage.setItem("stateMode", JSON.stringify(true));
     }else{
         darkModeOff();
-        document.querySelector(".back").addEventListener("mouseover", () =>{
-            document.querySelector(".back").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".back").addEventListener("mouseout", () =>{
-            document.querySelector(".back").style.color = "#0c0c0c";
-        });
-
-        document.querySelector(".backmode").addEventListener("mouseover", () =>{
-            document.querySelector(".backmode").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".backmode").addEventListener("mouseout", () =>{
-            document.querySelector(".backmode").style.color = "#0c0c0c";
-        });
-
-        document.querySelector(".settings").addEventListener("mouseover", () =>{
-            document.querySelector(".settings").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".settings").addEventListener("mouseout", () =>{
-            document.querySelector(".settings").style.color = "#0c0c0c";
-        });
-
-        document.querySelector(".mode").addEventListener("mouseover", () =>{
-            document.querySelector(".mode").style.color = "rgb(124, 255, 124)";
-        });
-    
-        document.querySelector(".mode").addEventListener("mouseout", () =>{
-            document.querySelector(".mode").style.color = "#0c0c0c";
-        });
-
+        document.getElementById("toggle").checked = false;
+        localStorage.setItem("stateMode", JSON.stringify(false));
     }
 });
 
@@ -979,7 +1005,7 @@ botonConfirmMode.addEventListener("click", () =>{
         }
         document.querySelector(".containerModes").classList.remove("showContainerModes");
     }
-    contMode-
+    contMode--;
 
 });
 
